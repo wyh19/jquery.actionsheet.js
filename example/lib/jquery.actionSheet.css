@@ -1,0 +1,75 @@
+﻿.actionSheet {
+   width:100%;
+   border-radius: 5px 5px 0 0;
+   position:absolute;
+   left:0;
+   bottom:0;
+   background-color:#333;
+   color:#fff;
+   z-index:19999;
+   display:none;
+}
+.as-loading {
+    display:none;
+    position:absolute;
+    width:100%;
+    height:100%;
+    text-align:center;
+    line-height:100%;
+    left:0;
+    top:0;
+    background-color:#fff;
+}
+/*grid模式下的样式*/
+.as-grid-cell {
+    float:left;
+    width:60px;
+}
+.as-grid-cell-active {
+    color:#fff;
+    background-color:#0068A6;
+    border-radius:3px;
+}
+.as-grid-cell-logo {
+    width:60px;
+    height:60px;
+}
+.as-grid-cell-label {
+    height:20px;
+    text-align:center;
+    font-size:11px;
+    margin-top:-5px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+/*list模式下的样式*/
+.as-list-cell {
+    width:100%;
+    border-bottom:1px solid #ccc;
+}
+.as-list-cell:last-child{
+        border:none;
+    }
+.as-list-cell-active {
+    color:#fff;
+     background-color:#0068A6;
+}
+.as-list-cell-label {
+    text-align:center;
+    padding:10px;
+    
+}
+
+.as-bg {
+    display:none;
+    background-color:#777;
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:9999;
+    opacity: 0.3; 
+    filter:alpha(opacity=30); 
+}

@@ -1,4 +1,5 @@
-﻿/*
+﻿/// <reference path="../jquery-3.1.0.min.js" />
+/*
 *author:wyh19  2016/9/12
 *name:ActionSheet,用于移动端web的底部弹出菜单效果
 *数据支持本地(json对象)和远程模式(url)；形式支持文字列表(list)和带图标的九宫格形式(grid)

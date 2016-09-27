@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>插件使用演示</title>
+    <script src="lib/jquery-3.1.0.min.js"></script>
+    <link href="lib/jquery.actionSheet.css" rel="stylesheet"/>
+    <script src="lib/jquery.actionSheet.js"></script>
+</head>
+<body>
+<style>
+    #virtualMob {
+        width: 320px;
+        height: 500px;
+        border: 1px solid #ccc;
+        margin: auto;
+        position: relative;
+    }
+
+    #btnShow {
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        background-color: #333;
+        color: #fff;
+        text-align: right;
+    }
+</style>
+<script>
+    //本地测试数据
+    var data1 = [
+        {icon: 'ZHM.png', label: '主画面', id: 'zhm'},
+        {icon: 'jsd.png', label: '进水段', id: 'jsd'},
+        {icon: 'SHC.png', label: '生化池', id: 'shc'},
+        {icon: 'XDC.png', label: '消毒池', id: 'xdc'},
+        {icon: 'LBLC.png', label: '滤布滤池', id: 'lblc'},
+        {icon: 'WNC.png', label: '污泥池', id: 'wnc'},
+        {icon: 'GFJF.png', label: '鼓风机房', id: 'gfjf'}
+    ];
+</script>
+<script>
+    //全局的实例化的actionsheet对象
+    var as = null;
+    $(function () {
+        var as = $('#actionSheet').ActionSheet({
+            data: data1,
+            imgBaseUrl: 'lib/icon/',
+            mode: 'grid',//分list和grid两种模式，默认是list
+            imgField: 'icon',
+            labelField: 'label',
+            idField: 'id',
+            trggerFirst: true,
+            callback: function (graphid, graphlabel) {
+                $('#infoPanel').html('点击的id为' + graphid + ',菜单的名字为' + graphlabel);
+            }
+        });
+
+        $('#btnShow').click(function () {
+            as.show();
+        });
+    });
+</script>
+<div id="virtualMob">
+    <div id="btnShow">点击按钮</div>
+    <div id="infoPanel">
+    </div>
+    <div id="actionSheet"></div>
+</div>
+</body>
+</html>
